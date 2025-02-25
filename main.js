@@ -1,6 +1,6 @@
 // Smooth scroll for navigation links
 document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+    anchor.addEventListener('click', function (e) {
         const href = this.getAttribute('href');
         if (href !== '#') {
             e.preventDefault();
@@ -31,8 +31,8 @@ let cartCount = 0;
 document.querySelectorAll('.watch-card').forEach(card => {
     card.addEventListener('click', () => {
         cartCount++;
-        document.querySelector('.cart').textContent = `CART (${cartCount})`;
-        
+        document.querySelector('#card_count').innerHTML = `${cartCount}`;
+        document.querySelector('#card_count').style.color = "#c39a06";
         // Add animation effect
         const notification = document.createElement('div');
         notification.textContent = 'Added to cart';
@@ -44,7 +44,7 @@ document.querySelectorAll('.watch-card').forEach(card => {
         notification.style.padding = '1rem 2rem';
         notification.style.borderRadius = '5px';
         notification.style.animation = 'fadeIn 0.3s, fadeOut 0.3s 2s forwards';
-        
+
         document.body.appendChild(notification);
         setTimeout(() => {
             notification.remove();

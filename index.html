@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EQUAL - Luxury Watches</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&f[]=supreme@400,700&display=swap"
         rel="stylesheet">
 </head>
-
 <body>
     <nav>
         <div class="logo">EQUAL</div>
@@ -21,8 +21,8 @@
             <a href="#">CONTACT</a>
         </div>
         <div class="nav-icons">
-            <a href="#" class="account">ACCOUNT</a>
-            <a href="#" class="cart">CART (0)</a>
+            <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i>&nbsp;&nbsp;&nbsp;CART(<span id="card_count">0</span>)</a>
+            <a href="#" class="account"><i class="fa-regular fa-user"></i>&nbsp;&nbsp;ACCOUNT</a>
         </div>
     </nav>
 
@@ -225,11 +225,11 @@
             </div>
             <div class="featured-watch">
                 <div class="card-tag">Express Gold</div>
-                <div style="overflow: hidden;border-radius: 15px;">
+                <div style="overflow: hidden;">
                     <img src="https://cdn.prod.website-files.com/636a2d3c26aa845d12b17679/64613a6198c3eb6849cc68d6_Rolex-Cosmograph-Daytona-116518LN-Petite-Geneve-Petrovic-boutique-17.webp"
-                        alt="Featured Watch" width="100%">
+                        alt="Featured Watch" width="100%" style="border-radius: 15px;">
                 </div>
-                <div class="watch-info">
+                <div class="watch-info" style="padding: 1.5rem;">
                     <h3>COSMOGRAPH DAYTONA</h3>
                     <p>$44,072.00</p>
                 </div>
@@ -273,14 +273,51 @@
                 <div class="card-tag">Express Gold</div>
                 <img src="https://images.unsplash.com/photo-1526045431048-f857369baa09?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
                     alt="Featured Watch"style="border-radius:18px" width="100%" height="85%">
-                <div class="watch-info">
+                <div class="watch-info" style="padding: 1.5rem;">
                     <h3>YACHT-MASTER 37</h3>
                     <p>$35,999.00</p>
                 </div>
             </div>
         </div>
     </section>
-
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h2>EQUAL</h2>
+                <p>Timeless Elegance, Perfected.</p>
+            </div>
+    
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Collection</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>Email: support@equalwatches.com</p>
+                <p>Phone: <a href="tel:+91 12345 65478" style="text-decoration: none;">+91 12345 65478</a></p>
+                <p>Location: 123 Luxury St, Amreli, India</p>
+            </div>
+    
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>© 2025 EQUAL Luxury Watches. All Rights Reserved.</p>
+        </div>
+    </footer>
     <script src="main.js"></script>
 </body>
 

@@ -4,12 +4,6 @@
     box-sizing: border-box;
 }
 
-@font-face {
-    font-family: "font";
-    font-family: "sans-serif";
-    src: url(./Westack-nR19P.otf);
-}
-
 body {
     background-color: #ffffff;
     color: #312726;
@@ -22,6 +16,7 @@ nav {
     align-items: center;
     padding: 2rem 4rem;
     position: fixed;
+    top: 0;
     width: 100%;
     background: white;
     z-index: 1000;
@@ -43,10 +38,11 @@ nav {
     letter-spacing: 1px;
     font-weight: 500;
 }
-.nav-links a:hover{
+
+.nav-links a:hover {
     transition: 0.2s all ease-in-out;
     scale: 1.1;
-    color: #e3bf0c;
+    color: #c39a06;
 }
 
 .nav-links a.active {
@@ -177,7 +173,8 @@ h1 {
     font-weight: 500;
     padding-bottom: 0.5rem;
 }
-.view-all:hover{
+
+.view-all:hover {
     font-weight: 800;
 }
 
@@ -214,10 +211,12 @@ h1 {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     border: 1px solid rgb(69, 43, 43);
 }
-.dark{
+
+.dark {
     background: #3a2e2c;
     color: white;
 }
+
 .card-image {
     overflow: hidden;
     border-radius: 10px;
@@ -296,6 +295,12 @@ h1 {
     object-fit: cover;
     border-radius: 20px;
 }
+.discover-images img:hover{
+    flex: 1;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+}
 
 .shop-brands {
     padding: 4rem;
@@ -311,13 +316,12 @@ h1 {
 }
 
 .brand-card {
-    /* flex: 1 1; */
     position: relative;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     width: 40%;
-    height: 700px;
+    height: 600px;
 }
 
 
@@ -381,15 +385,112 @@ h1 {
 }
 
 .featured-watch {
+    overflow: hidden;
+    /* flex: 0 calc(50% - 0rem); */
     flex: 1 1 calc(50% - 1rem);
     position: relative;
     border-radius: 20px;
     background: white;
-    padding: 2rem;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     min-width: 300px;
 }
 
+
+/* Footer Styling */
+footer {
+    background: #111;
+    color: #fff;
+    padding: 50px 20px 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    text-align: left;
+}
+
+.footer-brand h2 {
+    font-family: 'Clash Display', sans-serif;
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.footer-brand p {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.footer-links,
+.footer-contact,
+.footer-social {
+    /* gap: 50px; */
+    line-height: 17px;
+    /* height: calc(auto + 10rem); */
+    margin-top: 20px;
+}
+
+.footer-links h3,
+.footer-contact h3,
+.footer-social h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+    color: #bbb;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #c39a06;
+}
+
+.footer-contact p{
+    margin: 5px 0;
+    font-size: 14px;
+    opacity: 0.8;
+}
+.footer-contact p a {
+    color: #eaeaea;
+}
+
+.footer-social a {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 20px;
+    color: #bbb;
+    transition: 0.3s;
+}
+
+.footer-social a:hover {
+    transition: 0.3s all ease-in-out;
+    color: #ead76b;
+}
+
+.footer-bottom {
+    opacity: 0.3;
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #393939;
+    padding-top: 20px;
+    font-size: 13px;
+}
 @media (max-width: 1400px) {
     h1 {
         font-size: 5rem;
@@ -443,6 +544,8 @@ h1 {
     }
 
     .hero {
+        height: auto;
+        margin-top: 5rem;
         flex-direction: column;
         padding: 0 2rem;
     }
@@ -452,17 +555,27 @@ h1 {
         margin-bottom: 2rem;
     }
 
+    .hero-image {
+        flex: none;
+        position: static;
+        height: 40vh !important;
+    }
+
     .hero-content {
         padding-right: 0;
         padding-bottom: 2rem;
     }
 
     .section-header {
-        padding: 4rem 2rem 2rem;
+        padding: 3rem 2rem 2rem;
     }
 
     .section-header h2 {
         font-size: 2.5rem;
+    }
+
+    .watch-row {
+        padding: 0 2rem;
     }
 
     .watch-grid {
@@ -475,7 +588,15 @@ h1 {
     }
 
     .discover-grid {
-        padding: 0 2rem;
+        padding: 0 1rem;
+    }
+
+    .discover-images {
+        flex-direction: row;
+    }
+
+    .discover-images img {
+        overflow: hidden;
     }
 
     .brands-grid {
@@ -485,9 +606,22 @@ h1 {
     .shop-brands {
         padding: 2rem;
     }
+
+    /* for footer */
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-social a {
+        margin: 5px;
+    }
 }
 
 @media (max-width: 480px) {
+    .hero {
+        padding: 0 1rem;
+    }
+
     .nav-icons {
         display: none;
     }
@@ -501,10 +635,33 @@ h1 {
     }
 
     .card-tag {
+        top: 1rem;
+        left: 1rem;
         font-size: 0.8rem;
+    }
+
+    .watch-row {
+        padding: 0 1rem;
     }
 
     .watch-info h3 {
         font-size: 1rem;
+    }
+
+    .shop-brands {
+        padding: 0rem;
+    }
+
+    .brands-grid {
+        padding: 0 0.7rem;
+    }
+
+    .brand-card {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+
+    .discover-images {
+        flex-direction: column;
     }
 }
