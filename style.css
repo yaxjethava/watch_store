@@ -10,6 +10,7 @@ body {
     font-family: 'Supreme', sans-serif;
 }
 
+/* nav bar code */
 nav {
     display: flex;
     justify-content: space-between;
@@ -30,18 +31,39 @@ nav {
     letter-spacing: 2px;
 }
 
-.nav-links a {
+.nav-links a,
+.nav-icons a {
+    position: relative;
     margin: 0 1.5rem;
     text-decoration: none;
     color: #312726;
     font-size: 0.9rem;
     letter-spacing: 1px;
     font-weight: 500;
+    display: inline;
+    padding-bottom: 5px;
 }
 
-.nav-links a:hover {
+.nav-links a::after,
+.nav-icons a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #c39a06;
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-links a:hover::after,
+.nav-icons a:hover::after {
+    width: 100%;
+}
+
+.nav-links a:hover,
+.nav-icons a:hover {
     transition: 0.2s all ease-in-out;
-    scale: 1.1;
     color: #c39a06;
 }
 
@@ -58,6 +80,7 @@ nav {
     font-weight: 500;
 }
 
+/* for hero section */
 .hero {
     height: 95vh;
     display: flex;
@@ -295,7 +318,8 @@ h1 {
     object-fit: cover;
     border-radius: 20px;
 }
-.discover-images img:hover{
+
+.discover-images img:hover {
     flex: 1;
     height: 400px;
     object-fit: cover;
@@ -461,11 +485,12 @@ footer {
     color: #c39a06;
 }
 
-.footer-contact p{
+.footer-contact p {
     margin: 5px 0;
     font-size: 14px;
     opacity: 0.8;
 }
+
 .footer-contact p a {
     color: #eaeaea;
 }
@@ -491,6 +516,7 @@ footer {
     padding-top: 20px;
     font-size: 13px;
 }
+
 @media (max-width: 1400px) {
     h1 {
         font-size: 5rem;
@@ -612,6 +638,7 @@ footer {
         flex-direction: column;
         text-align: center;
     }
+
     .footer-social a {
         margin: 5px;
     }
